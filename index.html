@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Run It Agency — Landing pages that book appointments, for med-spas</title>
 <meta name="description" content="Conversion-focused landing pages for med-spas and aesthetic clinics. Free mockup first, live in 48 hours, $350 flat.">
+<meta property="og:title" content="Run It Agency — Landing pages that book appointments">
+<meta property="og:description" content="Free mockup of your own page first. Live in 48 hours. $350 flat.">
+<meta property="og:image" content="https://runitagency.online/img/og-agency.jpg">
+<meta property="og:url" content="https://runitagency.online/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -177,6 +182,25 @@
     font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
     transform:rotate(-3deg);
   }
+
+  /* ---------- recent work ---------- */
+  .sec-work{background:var(--paper)}
+  .sec-work h2{font-family:var(--disp);font-size:clamp(30px,4vw,48px);line-height:1.05;text-transform:uppercase;text-align:center;letter-spacing:-.01em}
+  .work-sub{text-align:center;margin-top:14px;font-size:17px}
+  .work-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:48px;align-items:center;margin-top:56px;max-width:880px;margin-left:auto;margin-right:auto}
+  .polaroid{
+    display:block;background:#fff;border:2px solid var(--black);border-radius:8px;
+    box-shadow:6px 6px 0 var(--black);padding:12px 12px 14px;
+    transform:rotate(-2deg);text-decoration:none;
+    transition:transform .2s,box-shadow .2s;
+  }
+  .polaroid:hover{transform:rotate(-2deg) translate(-2px,-2px);box-shadow:9px 9px 0 var(--black)}
+  .polaroid.p-2{transform:rotate(2.5deg)}
+  .polaroid.p-2:hover{transform:rotate(2.5deg) translate(-2px,-2px)}
+  .polaroid img{width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px}
+  .p-cap{display:block;margin-top:12px;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-align:center;color:var(--black)}
+  .work-note{text-align:center;margin-top:48px;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  @media(max-width:760px){.work-grid{grid-template-columns:1fr;gap:40px}.polaroid.p-2{max-width:280px;margin:0 auto}}
 
   /* ---------- pricing ---------- */
   .sec-price{background:var(--tomato);color:var(--paper)}
@@ -356,6 +380,24 @@
     <h2>Don’t love the mockup? <mark>You pay nothing.</mark></h2>
     <p>And if the finished page isn’t clearly better than the one you have now, don’t pay the second half. That’s the whole contract — no retainers, no lock-ins, no 30-page PDFs.</p>
     <span class="g-stick">The risk is on me, not you</span>
+  </div>
+</section>
+
+<section class="sec sec-work" id="work">
+  <div class="wrap">
+    <h2>Fresh from the workbench</h2>
+    <p class="work-sub">Real concept builds, live right now — click one and poke around.</p>
+    <div class="work-grid">
+      <a class="polaroid" href="/specs/thomas-rose/">
+        <img src="/img/work-tr-desktop.jpg" width="900" height="633" alt="Thomas Rose Aesthetics concept redesign, desktop view" loading="lazy">
+        <span class="p-cap">Thomas Rose Aesthetics · med-spa concept ↗</span>
+      </a>
+      <a class="polaroid p-2" href="/specs/thomas-rose/">
+        <img src="/img/work-tr-mobile.jpg" width="420" height="908" alt="Thomas Rose Aesthetics concept redesign, mobile view" loading="lazy">
+        <span class="p-cap">Same build, on the phone ↗</span>
+      </a>
+    </div>
+    <p class="work-note">Yours could be next — the mockup is free ✷</p>
   </div>
 </section>
 

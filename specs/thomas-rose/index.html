@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
+<meta property="og:title" content="Thomas Rose Aesthetics — Concept Redesign">
+<meta property="og:description" content="A 48-hour landing page concept by Run It Agency.">
+<meta property="og:image" content="https://runitagency.online/img/og-spec.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <title>Thomas Rose Aesthetics — Botox, Filler & Skin in East Nashville (Concept Redesign)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,9 +56,19 @@
   .hero p{max-width:50ch;font-size:18.5px}
   .cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;align-items:center}
   .hero-note{font-size:13.5px;margin-top:14px;opacity:.7}
-  .rose-art{display:flex;justify-content:center}
-  .rose-art svg{width:min(300px,100%);height:auto}
-    @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:40px}.rose-art{display:none}}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block}
+  .hero-photo .rose-chip{
+    position:absolute;bottom:-18px;left:-18px;width:88px;height:88px;
+    background:var(--porcelain);border-radius:50%;border:1px solid #E7D9D2;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hero-photo .rose-chip svg{width:52px;height:auto}
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr;padding-top:40px}
+    .hero-photo img{aspect-ratio:16/10}
+    .hero-photo .rose-chip{left:auto;right:14px;bottom:-14px;width:72px;height:72px}
+  }
 
   /* trust strip */
   .strip{background:var(--plum);color:var(--porcelain);padding:16px 0}
@@ -107,6 +121,9 @@
   .quote blockquote{font-family:var(--serif);font-size:19px;line-height:1.55;padding-left:14px}
   .quote figcaption{margin-top:18px;font-size:14px;font-weight:700;padding-left:14px}
   .quote figcaption span{display:block;font-weight:400;opacity:.7}
+
+  .about-photo{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block;margin-bottom:24px}
+  .photo-band img{width:100%;height:clamp(180px,26vw,320px);object-fit:cover;display:block}
 
   /* steps */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:step}
@@ -168,15 +185,17 @@
     </div>
     <p class="hero-note rise d4">New here? Book a consultation — it's a conversation, not a commitment.</p>
   </div>
-  <div class="rose-art rise d3" aria-hidden="true">
-    <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B96A79" stroke-width="2.5" stroke-linecap="round">
-      <path d="M100 96c-14-2-24-12-22-26 2-13 14-21 26-19 11 2 18 11 16 22-1 9-9 15-18 14-7-1-12-7-11-14 1-5 6-9 11-8" opacity=".9"/>
-      <path d="M100 96c16 0 30-10 32-26" opacity=".55"/>
-      <path d="M100 96v128" stroke="#8FA58C"/>
-      <path d="M100 150c-18-4-30-18-32-36 18 2 30 16 32 36z" stroke="#8FA58C"/>
-      <path d="M100 178c18-4 30-18 32-36-18 2-30 16-32 36z" stroke="#8FA58C"/>
-    </svg>
-  </div>
+  <figure class="hero-photo rise d3">
+    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=760&h=950&fit=crop&q=75&auto=format" width="760" height="950" alt="An aesthetic treatment in progress at a med spa" fetchpriority="high">
+    <span class="rose-chip" aria-hidden="true">
+      <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#B96A79" stroke-width="8" stroke-linecap="round">
+        <path d="M100 96c-14-2-24-12-22-26 2-13 14-21 26-19 11 2 18 11 16 22-1 9-9 15-18 14-7-1-12-7-11-14 1-5 6-9 11-8" opacity=".9"/>
+        <path d="M100 96v128" stroke="#8FA58C"/>
+        <path d="M100 150c-18-4-30-18-32-36 18 2 30 16 32 36z" stroke="#8FA58C"/>
+        <path d="M100 178c18-4 30-18 32-36-18 2-30 16-32 36z" stroke="#8FA58C"/>
+      </svg>
+    </span>
+  </figure>
 </header>
 
 <div class="strip" role="presentation">
@@ -258,12 +277,20 @@
       <p>Shannon is a board-certified family nurse practitioner who built Thomas Rose Aesthetics on a simple belief: aesthetic care should be attentive, relationship-driven, and honest about what will actually help.</p>
       <p>It's truly family-run — Shannon leads every treatment, and her husband keeps the schedule running. When you call, you're talking to the people whose name is on the door.</p>
     </div>
-    <figure class="quote">
+    <div>
+      <!-- Post-signing: replace with Shannon's real headshot / in-clinic photo -->
+      <img class="about-photo" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&h=600&fit=crop&q=75&auto=format" width="800" height="600" alt="A facial treatment being applied at an aesthetics studio" loading="lazy">
+      <figure class="quote">
       <blockquote>Shannon demonstrated her skill, knowledge and professional demeanor throughout our Morpheus8 and laser treatment. I want to express my appreciation and admiration.</blockquote>
       <figcaption>Robert A. <span>Physician, 50 years in practice</span></figcaption>
-    </figure>
+      </figure>
+    </div>
   </div>
 </section>
+
+<div class="photo-band" role="presentation">
+  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1800&h=560&fit=crop&q=75&auto=format" width="1800" height="560" alt="Rolled spa towel, skincare bottle and pink tulips on a table" loading="lazy">
+</div>
 
 <section class="sec" style="padding-top:0">
   <div class="wrap">
