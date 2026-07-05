@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Rejuvenate Austin — Physician-Owned Med Spa & Wellness (Concept Redesign)</title>
+<meta property="og:title" content="Rejuvenate Austin — Concept Redesign">
+<meta property="og:description" content="A 48-hour landing page concept by Run It Agency.">
+<meta property="og:image" content="https://runitagency.online/img/og-spec-ra.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dawn:#FDF9F3;
+    --teal:#163B3B;
+    --teal-soft:#2E5A56;
+    --coral:#E2725B;
+    --gold:#F2B84B;
+    --halo1:#FBE7C8;
+    --halo2:#F7C59F;
+    --serif:'Young Serif',serif;
+    --sans:'Nunito Sans',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--dawn);color:var(--teal);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--gold);color:var(--teal)}
+  a{color:inherit}
+  :focus-visible{outline:2.5px solid var(--coral);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1100px;margin:0 auto;padding-left:28px;padding-right:28px}
+
+  .eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
+
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:800;font-size:15.5px;
+    background:var(--coral);color:#fff;
+    padding:16px 32px;border-radius:999px;
+    box-shadow:0 6px 18px rgba(226,114,91,.35);
+    transition:transform .2s,box-shadow .2s,background .2s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(226,114,91,.4)}
+  .btn-line{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
+  .btn-line:hover{background:var(--teal);color:var(--dawn);box-shadow:inset 0 0 0 2px var(--teal)}
+
+  /* nav */
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;position:relative;z-index:3}
+  .brand{font-family:var(--serif);font-size:21px;text-decoration:none}
+  .brand span{color:var(--coral)}
+  .nav .btn{padding:12px 24px;font-size:13.5px}
+
+  /* hero with sunrise halo */
+  .hero{position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;left:50%;top:-340px;transform:translateX(-50%);
+    width:1200px;height:1200px;border-radius:50%;
+    background:radial-gradient(circle,var(--halo2) 0%,var(--halo1) 42%,transparent 68%);
+    opacity:.85;pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2;text-align:center;padding-top:70px;padding-bottom:110px;max-width:760px;margin:0 auto}
+  .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,6.4vw,78px);line-height:1.05;margin:20px 0 22px}
+  .hero h1 em{font-style:normal;color:var(--coral)}
+  .hero-sub{font-size:19px;max-width:54ch;margin:0 auto}
+  .hero-sub strong{font-weight:800}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:36px}
+  .hero-note{font-size:13.5px;font-weight:600;margin-top:16px;color:var(--teal-soft)}
+  .press{margin-top:52px;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-soft)}
+  .press span{color:var(--gold);padding:0 10px}
+
+  /* signature: rotating review sun-stamp */
+  .stamp{
+    position:absolute;z-index:2;right:6%;top:340px;width:150px;height:150px;pointer-events:none;
+  }
+  .stamp .core{
+    position:absolute;inset:34px;border-radius:50%;background:var(--gold);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-weight:800;color:var(--teal);box-shadow:0 8px 24px rgba(242,184,75,.4);
+  }
+  .stamp .core b{font-family:var(--serif);font-size:26px;line-height:1}
+  .stamp .core i{font-style:normal;font-size:9px;letter-spacing:.08em}
+  .stamp svg{width:100%;height:100%;animation:spin 26s linear infinite}
+  .stamp svg text{font-family:var(--sans);font-weight:800;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;fill:var(--teal)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media(max-width:900px){.stamp{display:none}}
+
+  /* teal strip */
+  .strip{background:var(--teal);color:var(--dawn);padding:15px 0;position:relative;z-index:2}
+  .strip .wrap{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .strip span{color:var(--gold)}
+
+  /* sections */
+  .sec{padding-top:96px;padding-bottom:96px}
+  .sec-head{text-align:center;max-width:62ch;margin:0 auto 60px}
+  .sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,46px);line-height:1.12;margin-top:14px}
+  .sec-head p{margin-top:14px;color:var(--teal-soft)}
+
+  /* services: category bands with chips */
+  .cat{max-width:880px;margin:0 auto}
+  .cat + .cat{margin-top:44px}
+  .cat h3{font-family:var(--serif);font-weight:400;font-size:22px;display:flex;align-items:baseline;gap:14px}
+  .cat h3 small{font-size:13px;font-weight:800;font-family:var(--sans);color:var(--coral);letter-spacing:.08em;text-transform:uppercase}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .chip{
+    font-size:14.5px;font-weight:600;padding:9px 18px;border-radius:999px;
+    background:#fff;border:1.5px solid rgba(22,59,59,.18);
+  }
+  .chip.hot{border-color:var(--gold);background:#FEF6E4}
+
+  /* doctor */
+  .doc{background:var(--teal);color:var(--dawn)}
+  .doc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  @media(max-width:860px){.doc-grid{grid-template-columns:1fr;gap:40px}}
+  .doc img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:16px;display:block}
+  .doc .eyebrow{color:var(--gold)}
+  .doc h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:14px 0 18px}
+  .doc p{color:#E9E2D4}
+  .doc p + p{margin-top:14px}
+  .doc p strong{color:var(--dawn)}
+
+  /* testimonials */
+  .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1020px;margin:0 auto}
+  @media(max-width:880px){.t-grid{grid-template-columns:1fr;max-width:560px}}
+  .t-card{background:#fff;border:1.5px solid rgba(22,59,59,.12);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;gap:14px}
+  .stars{color:var(--gold);letter-spacing:3px;font-size:15px}
+  .t-card p{font-size:15.5px;flex:1}
+  .t-card p b{color:var(--coral)}
+  .t-card cite{font-style:normal;font-weight:800;font-size:14px}
+  .t-note{text-align:center;margin-top:36px;font-size:14px;font-weight:600;color:var(--teal-soft)}
+
+  /* vip */
+  .vip{max-width:880px;margin:0 auto;background:linear-gradient(120deg,#FEF6E4,#FBE7C8);border:1.5px solid var(--gold);border-radius:20px;padding:44px 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+  @media(max-width:760px){.vip{grid-template-columns:1fr;padding:34px 30px}}
+  .vip h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,32px)}
+  .vip ul{list-style:none;margin-top:16px}
+  .vip li{padding:7px 0;font-size:16px;display:flex;gap:10px}
+  .vip li::before{content:"☀";color:var(--coral);flex-shrink:0}
+  .vip .btn{justify-self:center}
+
+  /* final */
+  .final{position:relative;overflow:hidden;text-align:center}
+  .final::before{
+    content:"";position:absolute;left:50%;bottom:-540px;transform:translateX(-50%);
+    width:1100px;height:1100px;border-radius:50%;
+    background:radial-gradient(circle,var(--halo2) 0%,var(--halo1) 45%,transparent 70%);
+    pointer-events:none;
+  }
+  .final .wrap{position:relative;z-index:2}
+  .final h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.8vw,56px);line-height:1.1;max-width:18ch;margin:0 auto}
+  .final h2 em{font-style:normal;color:var(--coral)}
+  .final p{margin:20px auto 0;max-width:46ch;color:var(--teal-soft)}
+  .final .cta-row{margin-top:34px}
+  .final address{font-style:normal;margin-top:44px;font-size:14.5px;color:var(--teal-soft);line-height:1.9}
+  .final address a{text-decoration:none}
+  .final address a:hover{text-decoration:underline}
+
+  footer{padding:26px 0;font-size:12.5px;border-top:1.5px solid rgba(22,59,59,.12)}
+  .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--teal-soft)}
+  footer a{text-decoration:none;font-weight:800}
+  footer a:hover{text-decoration:underline}
+
+  .rise{opacity:0;transform:translateY(12px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.4s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media(prefers-reduced-motion:reduce){
+    .rise{opacity:1;transform:none;animation:none}
+    .stamp svg{animation:none}
+    html{scroll-behavior:auto}
+    .btn:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav">
+    <a class="brand" href="#">Rejuvenate <span>Austin</span></a>
+    <a class="btn" href="https://app.joinmoxie.com/booking/rejuvenate-austin">Book an appointment</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="stamp" aria-hidden="true">
+    <svg viewBox="0 0 150 150">
+      <defs><path id="circ" d="M75,75 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs>
+      <text><textPath href="#circ">4.7 ★ FROM 421 AUSTIN REVIEWS · BEAUTY IS POWER ·</textPath></text>
+    </svg>
+    <div class="core"><b>4.7★</b><i>421 reviews</i></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow rise d1">Physician-owned med spa &amp; wellness · West Austin</p>
+      <h1 class="rise d2">Beauty is power.<br><em>Plug in.</em></h1>
+      <p class="hero-sub rise d3">Rejuvenate Austin is <strong>Dr. Jessica Wright's</strong> physician-owned med spa — injectables, body sculpting, laser and wellness, planned by people who listen and measured by results. <strong>No cookie-cutter plans here.</strong></p>
+      <div class="cta-row rise d4">
+        <a class="btn" href="https://app.joinmoxie.com/booking/rejuvenate-austin">Book an appointment</a>
+        <a class="btn btn-line" href="https://app.joinmoxie.com/booking/rejuvenate-austin">Book a free consultation</a>
+      </div>
+      <p class="hero-note rise d4">Consultations are free · Saturday appointments available</p>
+      <p class="press rise d4">As seen in<span>·</span>Real Simple<span>·</span>Austin Monthly<span>·</span>The Sunday Edit<span>·</span>Huda Beauty</p>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    Physician-owned <span>✦</span> 4.7★ across 421 Google reviews <span>✦</span> Free consultations
+  </div>
+</div>
+
+<section class="sec" id="treatments">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Treatments</p>
+      <h2>Every tool that actually works, under one roof.</h2>
+      <p>From a surgeon-trained eye for injectables to body sculpting and full wellness support — your plan pulls from all of it.</p>
+    </div>
+    <div class="cat">
+      <h3>Injectables <small>the classics, done right</small></h3>
+      <div class="chips">
+        <span class="chip hot">Botox · Dysport · Xeomin</span><span class="chip">RHA &amp; Restylane fillers</span><span class="chip">Sculptra</span><span class="chip">Kybella</span>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Body sculpting <small>shape without surgery</small></h3>
+      <div class="chips">
+        <span class="chip hot">CoolSculpting Elite</span><span class="chip">EmSculpt Neo</span><span class="chip">CoolSculpting for men</span><span class="chip">Instant BBL</span>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Skin <small>texture, tone &amp; glow</small></h3>
+      <div class="chips">
+        <span class="chip hot">HydraFacial</span><span class="chip">AquaGold</span><span class="chip">SkinPen &amp; Secret RF microneedling</span><span class="chip">Opus Plasma</span><span class="chip">Vampire facial</span>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Laser &amp; energy <small>light, precisely applied</small></h3>
+      <div class="chips">
+        <span class="chip hot">Halo Pro</span><span class="chip">BBL PhotoFacial</span><span class="chip">Ultherapy</span><span class="chip">Laser hair removal</span><span class="chip">Vein &amp; tattoo removal</span>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Wellness <small>from the inside out</small></h3>
+      <div class="chips">
+        <span class="chip hot">Medical weight loss</span><span class="chip">Hormone support</span><span class="chip">Peptide therapy</span><span class="chip">O-Shot</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec doc">
+  <div class="wrap doc-grid">
+    <!-- Post-signing: replace with Dr. Wright's real portrait / team photo -->
+    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=600&fit=crop&q=75&auto=format" width="800" height="600" alt="An aesthetic treatment in progress" loading="lazy">
+    <div>
+      <p class="eyebrow">The surgeon's eye</p>
+      <h2>Led by Dr. Jessica Wright.</h2>
+      <p><strong>Board-certified in general surgery</strong> and named "The Face of Anti-aging and Rejuvenation" by Austin Monthly, Dr. Wright built Rejuvenate on a simple standard: aesthetic medicine deserves the same rigor as the operating room — and a lot more listening.</p>
+      <p>Her team of injectors and aestheticians treat you by name, plan around your face and your goals, and tell you honestly what to expect — results, downtime and price — before anything happens.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">421 reviews and counting</p>
+      <h2>Austin doesn't just rate them. It names names.</h2>
+    </div>
+    <div class="t-grid">
+      <figure class="t-card">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>"<b>Dana</b> is amazing and always keeps me looking fabulous and youthful. Cannot recommend enough."</p>
+        <cite>— Whitney</cite>
+      </figure>
+      <figure class="t-card">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>"Just had microneedling with <b>Paloma</b> — she detailed everything she was doing and communicated exceptionally. Such a great experience."</p>
+        <cite>— Samantha J.</cite>
+      </figure>
+      <figure class="t-card">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>"Natural looking results and <b>honest conversation</b> about what to expect as far as results and pricing. I've been coming for years."</p>
+        <cite>— Heather M.</cite>
+      </figure>
+    </div>
+    <p class="t-note">4.7★ average across 421 Google reviews</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="vip">
+      <div>
+        <p class="eyebrow">The VIP membership</p>
+        <h3>Your glow, on subscription.</h3>
+        <ul>
+          <li>A facial included every month</li>
+          <li>Botox at $10 per unit, always</li>
+          <li>Member-only perks in the VIP app</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://rejuvenatevip.repeatmd.app/referral/JWRIF4GC">Explore VIP perks</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec final">
+  <div class="wrap">
+    <h2>Rediscover your <em>vitality.</em></h2>
+    <p>Booking takes about a minute. Not sure where to start? The consultation is free — bring your questions.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://app.joinmoxie.com/booking/rejuvenate-austin">Book an appointment</a>
+    </div>
+    <address>
+      1301 W. 5th Street #100, Austin, TX 78703<br>
+      <a href="tel:+15129231071">512-923-1071</a> · <a href="mailto:hello@rejuvenateaustin.com">hello@rejuvenateaustin.com</a> · <a href="https://www.instagram.com/rejuvenateaustin">@rejuvenateaustin</a>
+    </address>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>Rejuvenate Austin · West 5th Street</span>
+    <span>Concept redesign by <a href="https://runitagency.online">Run It Agency</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

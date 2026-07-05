@@ -190,6 +190,9 @@
   .work-grid{display:grid;grid-template-columns:1.5fr .9fr 1.5fr;gap:44px;align-items:center;margin-top:56px;max-width:1080px;margin-left:auto;margin-right:auto}
   .polaroid.p-3{transform:rotate(-1.5deg)}
   .polaroid.p-3:hover{transform:rotate(-1.5deg) translate(-2px,-2px)}
+  .polaroid.p-4{transform:rotate(2deg);grid-column:2/span 2}
+  .polaroid.p-4:hover{transform:rotate(2deg) translate(-2px,-2px)}
+  @media(max-width:760px){.polaroid.p-4{grid-column:auto}}
   .polaroid{
     display:block;background:#fff;border:2px solid var(--black);border-radius:8px;
     box-shadow:6px 6px 0 var(--black);padding:12px 12px 14px;
@@ -401,6 +404,10 @@
       <a class="polaroid p-3" href="/specs/aesthetics-club/">
         <img src="/img/work-tac-desktop.jpg" width="900" height="633" alt="The Aesthetics Club concept redesign, desktop view" loading="lazy">
         <span class="p-cap">The Aesthetics Club · members-club concept ↗</span>
+      </a>
+      <a class="polaroid p-4" href="/specs/rejuvenate-austin/">
+        <img src="/img/work-ra-desktop.jpg" width="900" height="633" alt="Rejuvenate Austin concept redesign, desktop view" loading="lazy">
+        <span class="p-cap">Rejuvenate Austin · daybreak concept ↗</span>
       </a>
     </div>
     <p class="work-note">Yours could be next — the mockup is free ✷</p>
